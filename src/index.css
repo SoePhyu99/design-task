@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+body {
+  background-color: white;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../src/assets/fonts/Open_Sans/static/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "DmSans";
+  src: url("../src/assets/fonts/DM_Sans/static/DMSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "DmSansBold";
+  src: url("../src/assets/fonts/DM_Sans/static/DMSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../src/assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf");
+}
+
+@theme {
+  --color-primary: #434343;
+  --color-secondary: #15274b;
+  --color-accent: #7a7a7a;
+  --color-heading: #101010;
+  --color-border: #e4e4e4;
+  --color-footer: #f8f8f8;
+
+  --font-opensans: "OpenSans";
+  --font-dmsans: "DmSans";
+  --font-dmsansbold: "DmSansBold";
+  --font-playfairdisplay: "PlayFairDisplay";
+}
