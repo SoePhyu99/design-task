@@ -2,13 +2,13 @@ import { useRef } from "react";
 import { LiaFacebook, LiaInstagram } from "react-icons/lia";
 import { VscSend } from "react-icons/vsc";
 import validator from "validator";
+import Amex from "../assets/images/Payments/amex.png";
+import ApplePay from "../assets/images/Payments/applepay.png";
+import MasterCard from "../assets/images/Payments/mastercard.png";
+import Visa from "../assets/images/Payments/visa.png";
 import { QuickLinks } from "../entities/QuickLinks";
 import sendMail from "../utils/mailer";
 import Frame from "./Frame";
-import Visa from "../assets/images/Payments/visa.png";
-import MasterCard from "../assets/images/Payments/mastercard.png";
-import ApplePay from "../assets/images/Payments/applepay.png";
-import Amex from "../assets/images/Payments/amex.png";
 
 const Footer = () => {
   const ref = useRef<HTMLInputElement>(null);

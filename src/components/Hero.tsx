@@ -1,7 +1,7 @@
-import Ring from "../assets/images/ring.png";
 import Diamond from "../assets/images/diamond.png";
 import Diamonds from "../assets/images/diamonds.png";
 import InnerBanner from "../assets/images/innerbanner.png";
+import Ring from "../assets/images/ring.png";
 
 const Hero = () => {
   return (

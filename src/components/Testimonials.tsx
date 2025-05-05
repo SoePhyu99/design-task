@@ -1,7 +1,7 @@
+import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
 import Frame from "./Frame";
-import { useEffect, useState } from "react";
 
 interface User {
   name: string;

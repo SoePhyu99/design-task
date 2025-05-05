@@ -1,7 +1,7 @@
-import Frame from "./Frame";
-import { PiUserCircleCheck } from "react-icons/pi";
 import { GiDiamondHard } from "react-icons/gi";
 import { IoRibbonOutline } from "react-icons/io5";
+import { PiUserCircleCheck } from "react-icons/pi";
+import Frame from "./Frame";
 
 const Services = () => {
   return (
