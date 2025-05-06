@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 const sendMail = (email: string) => {
   const mailServiceKey = "service_0e4sxop";
-  const templateKey = "template_kakfdgh";
+  const templateKey = "template_vby1sqn";
   const publicKey = "L36M0C8GcRtJFUMRO";
   const templatePrams = {
     email: email,

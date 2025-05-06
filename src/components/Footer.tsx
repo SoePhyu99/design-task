@@ -17,8 +17,8 @@ const Footer = () => {
 
     if (ref.current?.value && validator.isEmail(ref.current.value)) {
       sendMail(ref.current?.value)
-        .then((res) => alert(res))
-        .catch((e) => alert(e));
+        .then(() => alert("Email sent!"))
+        .catch(() => alert("Check again! Error."));
     } else {
       alert("Enter a valid email address.");
     }
