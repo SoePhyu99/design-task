@@ -24,12 +24,12 @@ const Footer = () => {
     }
   };
   return (
-    <div className="pt-[89px] bg-footer">
+    <div className="pt-[50px] sm:pt-[89px] bg-footer">
       <Frame>
-        <div className="flex flex-wrap gap-[30px] pb-[59px]">
+        <div className="flex flex-wrap sm:gap-[30px] pb-[59px]">
           {QuickLinks.map((quickQuick, index) => (
-            <div key={index} className="w-[234px]">
-              <h1 className="uppercase mb-[15px] text-primary font-dmsansbold">
+            <div key={index} className="w-full sm:w-[234px]">
+              <h1 className="text-[14px] sm:text-base uppercase mb-[15px] text-primary font-dmsansbold">
                 {quickQuick.heading}
               </h1>
               <ul className="flex flex-col gap-[10px] text-primary">
@@ -39,6 +39,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
+              <div className="h-[1px] bg-border my-[8px]"></div>
             </div>
           ))}
           <div>
@@ -52,7 +53,7 @@ const Footer = () => {
                     type="email"
                     ref={ref}
                     name="email"
-                    className="w-[376px] text-[14px] px-[10px] py-[12px] bg-white text-primary focus:border-0"
+                    className="w-full sm:w-[376px] text-[14px] px-[10px] py-[12px] bg-white text-primary focus:border-0"
                     placeholder="Email Address"
                   />
                   <button
@@ -119,12 +120,29 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <div className="lg:hidden flex items-center justify-between text-primary font-dmsans py-[9px]">
+          <div className="flex gap-[20px]">
+            <a href="#" className="text-[8px]">
+              Terms & Conditions
+            </a>
+            <a href="#" className="text-[8px]">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-[8px]">
+              Site Map
+            </a>
+          </div>
+          <div className="flex gap-[25px]">
+            <LiaFacebook className="text-[18px]" />
+            <LiaInstagram className="text-[18px]" />
+          </div>
+        </div>
         <div className="h-[1px] bg-border"></div>
         <div className="py-[21px] flex justify-between items-center">
-          <p className="text-[14px] font-dmsans text-primary">
+          <p className="text-[10px] sm:text-[14px] mx-auto sm:mx-0 font-dmsans text-primary">
             © 2025, All Rights Reserved - MyJewel
           </p>
-          <div className="flex gap-[30px] items-center text-primary font-dmsans">
+          <div className="hidden lg:flex gap-[30px] items-center text-primary font-dmsans">
             <a href="#" className="text-[12px]">
               Terms & Conditions
             </a>
