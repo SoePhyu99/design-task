@@ -1,25 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { GoDotFill } from "react-icons/go";
+import useUsers from "../hooks/useUsers";
 import Frame from "./Frame";
 
-interface User {
-  name: string;
-  email: string;
-}
-
 const Testimonials = () => {
-  const [users, setUsers] = useState<User[]>([]);
+  const { data: users, error } = useUsers();
   const [currentPage, setCurrentPage] = useState(1);
+  // This is local pagination state.
+  // In production, paginated data will be fetched from the backend based on currentPage.
 
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
-      res.json().then((json: User[]) => setUsers(json))
-    );
-  }, []);
+  if (error) {
+    console.log(error);
+  }
+
   return (
     <Frame>
-      <div className="px-[20px] py-[70px] sm:py-[100px] relative">
+      <div className="px-[20px] sm:px-0 py-[70px] sm:py-[100px] relative">
         <h1 className="text-[26px] sm:text-[36px] mb-[30px] text-center font-playfairdisplay text-heading">
           Testimonials
         </h1>
@@ -35,7 +32,7 @@ const Testimonials = () => {
             />
           </button>
         )}
-        {currentPage !== Math.floor(users.length / 4) && (
+        {currentPage !== Math.floor(users ? users.length / 4 : 0) && (
           <button
             className="absolute top-[50%] right-[-3px] sm:right-[-21px] bg-white p-[12.5px] rounded-full border border-[#c4c4c4] cursor-pointer"
             onClick={() => setCurrentPage((current) => current + 1)}
@@ -48,46 +45,50 @@ const Testimonials = () => {
           </button>
         )}
         <div className="grid grid-cols-1 xl:hidden">
-          {users
-            .slice(currentPage * 1, currentPage * 1 + 1)
-            .map((user, index) => (
-              <div
-                key={index}
-                className="px-[25px] py-[46.7px] border border-border flex flex-col gap-[16.8px] text-center"
-              >
-                <div className="w-[120px] h-[120px] mx-auto bg-amber-200"></div>
-                <div>
-                  <h2 className="text-[14px] font-bold font-dmsans">
-                    {user.name}
-                  </h2>
-                  <p className="text-[12px]">{user.email}</p>
+          {users &&
+            users
+              .slice(currentPage * 1, currentPage * 1 + 1)
+              .map((user, index) => (
+                <div
+                  key={index}
+                  className="px-[25px] py-[46.7px] border border-border flex flex-col gap-[16.8px] text-center"
+                >
+                  <div className="w-[120px] h-[120px] mx-auto bg-gray-200"></div>
+                  <div>
+                    <h2 className="text-[14px] font-bold font-dmsans">
+                      {user.name}
+                    </h2>
+                    <p className="text-[12px]">{user.email}</p>
+                  </div>
+                  <p className="text-[14px] font-dmsans">
+                    Absolutely breathtaking! The craftsmanship of my diamond
+                    ring.
+                  </p>
                 </div>
-                <p className="text-[14px] font-dmsans">
-                  Absolutely breathtaking! The craftsmanship of my diamond ring.
-                </p>
-              </div>
-            ))}
+              ))}
         </div>
         <div className="hidden xl:grid grid-cols-4 gap-[30px]">
-          {users
-            .slice(currentPage * 4, currentPage * 4 + 4)
-            .map((user, index) => (
-              <div
-                key={index}
-                className="px-[25px] py-[46.7px] border border-border flex flex-col gap-[16.8px] text-center"
-              >
-                <div className="w-[120px] h-[120px] mx-auto bg-amber-200"></div>
-                <div>
-                  <h2 className="text-[14px] font-bold font-dmsans">
-                    {user.name}
-                  </h2>
-                  <p className="text-[12px]">{user.email}</p>
+          {users &&
+            users
+              .slice(currentPage * 4, currentPage * 4 + 4)
+              .map((user, index) => (
+                <div
+                  key={index}
+                  className="px-[25px] py-[46.7px] border border-border flex flex-col gap-[16.8px] text-center"
+                >
+                  <div className="w-[120px] h-[120px] mx-auto bg-gray-200"></div>
+                  <div>
+                    <h2 className="text-[14px] font-bold font-dmsans">
+                      {user.name}
+                    </h2>
+                    <p className="text-[12px]">{user.email}</p>
+                  </div>
+                  <p className="text-[14px] font-dmsans">
+                    Absolutely breathtaking! The craftsmanship of my diamond
+                    ring.
+                  </p>
                 </div>
-                <p className="text-[14px] font-dmsans">
-                  Absolutely breathtaking! The craftsmanship of my diamond ring.
-                </p>
-              </div>
-            ))}
+              ))}
         </div>
         <div className="flex gap-[8px] mt-[30px] justify-center">
           {[0, 1, 2].map((page) => (
