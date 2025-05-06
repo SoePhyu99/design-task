@@ -1,4 +1,4 @@
-import { reasons } from "../entities/Reasons";
+import { services } from "../data/services";
 import Frame from "./Frame";
 
 const Services = () => {
@@ -12,7 +12,7 @@ const Services = () => {
             Why Choose MyJewel?
           </h1>
           <div className="flex flex-wrap gap-[33px] justify-between">
-            {reasons.map((reason, index) => (
+            {services.map((reason, index) => (
               <div
                 key={index}
                 className="flex flex-col gap-[20px] p-[20px] text-center w-[400px] shadow-md bg-white z-20"
@@ -26,25 +26,6 @@ const Services = () => {
                 </p>
               </div>
             ))}
-            {/* <div className="flex flex-col gap-[20px] p-[20px] text-center w-[400px] shadow-md bg-white z-20">
-              <GiDiamondHard className="text-[45px] mx-auto" />
-              <h2 className="text-[20px] font-playfairdisplay font-semibold">
-                Crafted with Luxury Materials
-              </h2>
-              <p className="font-dmsans text-accent">
-                Only the finest diamonds, gemstones, and precious metals used.
-              </p>
-            </div>
-            <div className="flex flex-col gap-[20px] p-[20px] text-center w-[400px] bg-white shadow-md z-20">
-              <IoRibbonOutline className="text-[45px] mx-auto" />
-              <h2 className="text-[20px] font-playfairdisplay font-semibold">
-                Lifetime Warranty
-              </h2>
-              <p className="font-dmsans text-accent">
-                Lifetime warranty on every piece, ensuring quality and lasting
-                beauty.
-              </p>
-            </div> */}
           </div>
         </div>
       </Frame>

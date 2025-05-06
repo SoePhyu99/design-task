@@ -2,7 +2,7 @@ import { GiDiamondHard } from "react-icons/gi";
 import { IoRibbonOutline } from "react-icons/io5";
 import { PiUserCircleCheck } from "react-icons/pi";
 
-export const reasons = [
+export const services = [
   {
     title: "Personal Design Consultation",
     description: "Work with our designers to create your perfect piece.",

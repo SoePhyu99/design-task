@@ -6,7 +6,7 @@ import Amex from "../assets/images/Payments/amex.png";
 import ApplePay from "../assets/images/Payments/applepay.png";
 import MasterCard from "../assets/images/Payments/mastercard.png";
 import Visa from "../assets/images/Payments/visa.png";
-import { QuickLinks } from "../entities/QuickLinks";
+import { quick_links } from "../data/quick_links";
 import sendMail from "../utils/mailer";
 import Frame from "./Frame";
 
@@ -27,7 +27,7 @@ const Footer = () => {
     <div className="pt-[50px] sm:pt-[89px] bg-footer">
       <Frame>
         <div className="flex flex-wrap sm:gap-[30px] pb-[59px]">
-          {QuickLinks.map((quickQuick, index) => (
+          {quick_links.map((quickQuick, index) => (
             <div key={index} className="w-full sm:w-[234px]">
               <h1 className="text-[14px] sm:text-base uppercase mb-[15px] text-primary font-dmsansbold">
                 {quickQuick.heading}
@@ -39,7 +39,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-              <div className="h-[1px] bg-border my-[8px]"></div>
+              <div className="sm:hidden h-[1px] bg-border my-[8px]"></div>
             </div>
           ))}
           <div>

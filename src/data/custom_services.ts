@@ -1,4 +1,4 @@
-export const CustomServicesList = [
+export const custom_services = [
   {
     title: "Consultation",
     description:

@@ -2,7 +2,7 @@ import { FiChevronDown } from "react-icons/fi";
 import { GoDotFill, GoHeart } from "react-icons/go";
 import { HiOutlineCalendarDays, HiOutlineUserCircle } from "react-icons/hi2";
 import { IoBagOutline, IoSearchOutline } from "react-icons/io5";
-import { NavigationLinks } from "../entities/NavigationLinks";
+import { navigate_links } from "../data/navigate_links";
 
 const Navbar = () => {
   return (
@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center">
           <ul className="flex gap-[15px]">
-            {NavigationLinks.map((link, index) => (
+            {navigate_links.map((link, index) => (
               <li key={index} className="px-[20px] py-[2px]">
                 <a
                   href={link.href}

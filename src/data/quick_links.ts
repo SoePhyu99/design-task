@@ -1,4 +1,4 @@
-export const QuickLinks = [
+export const quick_links = [
   {
     heading: "CONTACT US",
     links: [

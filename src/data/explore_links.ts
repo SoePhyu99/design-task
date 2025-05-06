@@ -1,4 +1,4 @@
-export const exploreLinks = [
+export const explore_links = [
   {
     name: "How to Select the Ideal Wedding Band",
     href: "#",

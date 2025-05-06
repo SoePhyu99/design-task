@@ -1,6 +1,6 @@
 import DiamondRing from "../assets/images/DiamondRing.png";
 import GoldRing from "../assets/images/GoldRing.png";
-import { CustomServicesList } from "../entities/CustomServices";
+import { custom_services } from "../data/custom_services";
 import Frame from "./Frame";
 
 const CustomServices = () => {
@@ -56,7 +56,7 @@ const CustomServices = () => {
             vision, perfectly crafted.
           </p>
           <div className="flex flex-col gap-[30px]">
-            {CustomServicesList.map((service, index) => (
+            {custom_services.map((service, index) => (
               <div key={index} className="flex gap-[17px]">
                 <p className="text-accent text-[14px] sm:text-[20px] font-dmsans pt-[3px]">
                   {"0" + (index + 1)}

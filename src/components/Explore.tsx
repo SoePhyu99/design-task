@@ -1,6 +1,6 @@
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import WomanImage from "../assets/images/Woman.png";
-import { exploreLinks } from "../entities/ExploreLinks";
+import { explore_links } from "../data/explore_links";
 import Frame from "./Frame";
 
 const Explore = () => {
@@ -17,7 +17,7 @@ const Explore = () => {
               <br /> the 4Cs? Explore more of our diamond education pages:
             </p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[50px] gap-y-[23px]">
-              {exploreLinks.map((link, index) => (
+              {explore_links.map((link, index) => (
                 <div key={index} className="w-full sm:w-[318px]">
                   <a
                     href={link.href}
