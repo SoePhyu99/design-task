@@ -25,7 +25,6 @@ const Navbar = () => {
           <GoDotFill className="text-[4px] sm:text-[8px]" />
         </p>
         <div className="hidden sm:flex gap-[20px]">
-          {/* icon 17.22px */}
           <HiOutlineUserCircle width={"17.22px"} height={"17.22px"} />
           <GoHeart width={"17.22px"} height={"17.22px"} />
           <IoBagOutline width={"17.22px"} height={"17.22px"} />
