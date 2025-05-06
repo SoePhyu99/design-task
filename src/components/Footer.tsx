@@ -23,6 +23,7 @@ const Footer = () => {
       alert("Enter a valid email address.");
     }
   };
+
   return (
     <div className="pt-[50px] sm:pt-[89px] bg-footer">
       <Frame>

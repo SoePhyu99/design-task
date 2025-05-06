@@ -5,7 +5,7 @@ const sendMail = (email: string) => {
   const publicKey = "L36M0C8GcRtJFUMRO";
   const templatePrams = {
     email: email,
-    to_email: import.meta.env.EMAIL_TO,
+    to_email: import.meta.env.VITE_EMAIL_TO,
   };
   return emailjs.send(mailServiceKey, templateKey, templatePrams, publicKey);
 };
